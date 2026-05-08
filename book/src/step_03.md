@@ -3,7 +3,7 @@
 <div class="note">
 
 Create attention masks to prevent the model from _seeing_ future tokens during
-[autoregressive](https://docs.modular.com/glossary/ai/autoregression)
+[autoregressive](https://docs.modular.com/glossary/ai/autoregression/)
 generation.
 
 </div>

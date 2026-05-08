@@ -22,7 +22,7 @@ registry.
 ## The architecture declaration
 
 `arch.py` assembles the
-[`SupportedArchitecture`](https://docs.modular.com/max/api/python/generated/max.pipelines.lib.SupportedArchitecture/)
+[`SupportedArchitecture`](https://docs.modular.com/max/api/python/generated/max.pipelines.lib.registry.SupportedArchitecture/)
 that MAX registers. Each field tells the serving layer something it needs before
 a request arrives:
 
@@ -42,7 +42,7 @@ to a conversion function. When MAX loads the safetensors checkpoint, it calls
 `MaxGPT2LMHeadModel` expects.
 
 **`tokenizer`:** is
-[`TextTokenizer`](https://docs.modular.com/max/api/python/generated/max.pipelines.lib.TextTokenizer/),
+[`TextTokenizer`](https://docs.modular.com/max/api/python/generated/max.pipelines.TextTokenizer/),
 which wraps the Hugging Face tokenizer for the model. Before any token is
 processed, `max serve` calls it to convert the prompt to token IDs and, after
 generation, decode the output IDs back to text.
@@ -82,7 +82,7 @@ weights to a live endpoint:
    [`PipelineModelWithKVCache`](https://docs.modular.com/max/api/python/generated/max.pipelines.lib.PipelineModelWithKVCache/)
    subclass
 5. Register the package as a
-   [`SupportedArchitecture`](https://docs.modular.com/max/api/python/generated/max.pipelines.lib.SupportedArchitecture/)
+   [`SupportedArchitecture`](https://docs.modular.com/max/api/python/generated/max.pipelines.lib.registry.SupportedArchitecture/)
    and pass `--custom-architectures` to `max serve`
 
 Modern LLMs build on these same components with targeted refinements:

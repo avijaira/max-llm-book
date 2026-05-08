@@ -63,5 +63,3 @@ index = false
 [preprocessor.links]
 # Enables use of {{#include file.md}} to include other files
 renderers = ["html"]
-
-[preprocessor.codename]

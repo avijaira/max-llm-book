@@ -49,6 +49,16 @@ you write a line of model code. From there, you'll build the transformer block
 component by component, assemble those components into the full model, and
 finish by learning how inference and serving work with `max serve`.
 
+<div class="note">
+
+**Interactive companion notebook** — prefer to learn by running code? Open
+`notebooks/tutorial.ipynb` with `pixi run notebook`. Each section maps to a
+chapter here: you can inspect real tensor shapes, see activation visualizations,
+and generate text from pretrained weights, all without leaving JupyterLab. Read
+the chapters for the why; run the notebook for the how.
+
+</div>
+
 | Chapter                                   | What you'll learn                                                  |
 |-------------------------------------------|--------------------------------------------------------------------|
 | [Project setup](./setup.md)               | Install MAX and clone the repository                               |

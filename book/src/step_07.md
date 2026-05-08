@@ -37,7 +37,7 @@ next. The `*` in
 `Sequential(*(GPT2Block(config) for _ in range(config.n_layer)))` unpacks the
 generator as positional arguments.
 
-[`Tensor.arange`](https://docs.modular.com/max/api/python/generated/max.experimental.tensor.Tensor#max.experimental.tensor.Tensor.arange)
+[`Tensor.arange`](https://docs.modular.com/max/api/python/generated/max.experimental.tensor.Tensor/#max.experimental.tensor.Tensor.arange)
 generates position indices `[0, 1, ..., seq_length-1]` matching the input's
 dtype and device so they're compatible for embedding lookup.
 

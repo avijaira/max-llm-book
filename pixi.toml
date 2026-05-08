@@ -6,9 +6,11 @@ version = "0.1.1"
 license = "Apache-2.0"
 
 [tasks]
-install-mdbook-plugins = "cargo install mdbook-codename"
-build-book = { cmd = "cd book && mdbook build", depends-on = ["install-mdbook-plugins"] }
+build-book = "cd book && mdbook build"
 book = { cmd = "cd book && mdbook serve --open", depends-on = ["build-book"] }
+
+# Open the interactive Jupyter notebook companion.
+notebook = "cd notebooks && jupyter lab tutorial.ipynb"
 
 # Serve GPT-2 via MAX's OpenAI-compatible API.
 serve = "max serve --custom-architectures gpt2_arch --model gpt2"
@@ -25,10 +27,14 @@ fmt = "ruff format ."
 test = "pytest tests/ -v"
 
 [dependencies]
-modular = ">=26.1.0.dev2026012100"
+modular = ">=26.4.0.dev2026050805"
 transformers = "*" # Use MAX's version constraint
 pytorch = ">=2.8.0,<3"
 numpy = ">=2.3.3,<3"
 mdbook = "==0.4.52"
 ruff = ">=0.14.1,<0.15"
 pytest = ">=8.0.0,<9"
+jupyter = ">=1.0.0"
+ipykernel = ">=6.0.0"
+matplotlib = ">=3.7.0"
+nbformat = ">=5.9.0"
